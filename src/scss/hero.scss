@@ -1,0 +1,95 @@
+.hero {
+  background-image: url('../img/hero/bckgr_x1_mob.png'),
+    url('../img/hero/blue_background_mob_x1.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom 65px left 0px, top 0px left 0px;
+  background-size: 324px 317px, 100vw 520px;
+  padding-top: 72px;
+
+  @include media(desktop) {
+    padding-top: 50px;
+    background-image: url('../img/hero/bckgr_x1_desk.png'),
+      url('../img/hero/blue_background_desk_x1.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom 175px left -55px, top 0px left 0px;
+    background-size: 1290px 674px, 100vw 755px;
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: url('../img/hero/bckgr_x2_mob.png'),
+      url('../img/hero/blue_background_mob_x2.png');
+
+    @include media(desktop) {
+      background-image: url('../img/hero/bckgr_x2_desk.png'),
+        url('../img/hero/blue_background_desk_x2.png');
+    }
+  }
+}
+
+.container {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+  max-width: 320px;
+  @include media(desktop) {
+    max-width: 1280px;
+  }
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include media(desktop) {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 100px;
+  }
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 32px;
+  color: $_text_color;
+  @include media(desktop) {
+    font-size: 64px;
+    text-align: left;
+  }
+}
+
+.hero-btn {
+  background-color: transparent;
+  border: none;
+  width: 134px;
+  height: 38px;
+  margin: 0 auto;
+
+  @include media(desktop) {
+    width: 330px;
+    height: 95px;
+    margin: 0;
+  }
+}
+
+.hero-photo {
+  margin: 0 auto;
+  background-color: transparent;
+
+  @include media(desktop) {
+    margin: 0;
+  }
+}

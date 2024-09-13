@@ -1,25 +1,25 @@
 <header class="header">
-  <div class="header-container">
+  <div class="header-container container">
     <div class="logo">
-      <picture>
+      <a href="../index.html" aria-label="Bubble CoCo">
+    <picture>
         <source
           srcset="
-            ../img/header/logo_x1_mob.jpg 1x,
-            ../img/header/logo_x2_mob.jpg 2x
+            ./img/header/logo_x1_mob.jpg 1x,
+            ./img/header/logo_x2_mob.jpg 2x
           "
           media="(max-width: 1439px)"
         />
         <source
           srcset="
-            ../img/header/logo_x1_desk.jpg 1x,
-            ../img/header/logo_x2_desk.jpg 2x
+            ./img/header/logo_x1_desk.jpg 1x,
+            ./img/header/logo_x2_desk.jpg 2x
           "
           media="(min-width: 1440px)"
         />
-        <a href="../index.html" aria-label="Bubble CoCo">
-          <img src="../img/header/logo_x1_mob.jpg" alt="logo" loading="lazy" />
-        </a>
+        <img src="./img/header/logo_x1_mob.jpg" alt="logo" loading="lazy" />
       </picture>
+    </a>
       <div class="logo-text">
         <p>Bubble CoCo:</p>
         <p>Bubble shooter</p>
@@ -39,17 +39,17 @@
             <li class="header-navigation-item">
               <a href="#how_to_play" class="header-navigation-link">How to Play</a>
             </li>
-             <li class="header-navigation-item"></li>
+             <li class="header-navigation-item">
               <a href="#gallery" class="header-navigation-link">Gallery</a>
             </li>
-             <li class="header-navigation-item"></li>
+             <li class="header-navigation-item">
               <a href="#advantages" class="header-navigation-link">Advantages</a>
             </li>
           </ul>
       </nav>
-       <button id="menu-opn-btn" type="button">
+       <button id="menu-opn-btn" class="menu-btn" type="button">
             <svg width="18" height="13">
-              <use href="../img/sprite.svg#icon-menu"></use>
+              <use href="./img/sprite.svg#icon-menu"></use>
             </svg>
           </button>
   </div>
