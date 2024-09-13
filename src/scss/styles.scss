@@ -1,5 +1,5 @@
 @import './header.scss';
-@import './vite-promo.scss';
+@import './about.scss';
 
 :root {
   font-family: 'Montserrat', sans-serif;
@@ -14,4 +14,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+.section {
+  width: 320px;
+  margin: 0 auto;
+
+  @include media(desktop) {
+    width: 1440px;
+  }
 }
