@@ -1,0 +1,173 @@
+.section-about {
+  padding-bottom: 72px;
+
+  @include media(desktop) {
+    padding-bottom: 120px;
+  }
+}
+
+.about-container {
+  padding: 0 13px 0 16px;
+
+  @include media(desktop) {
+    padding: 0 80px 0 79px;
+  }
+}
+
+.title,
+.text {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  text-align: center;
+  color: $_text_color;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  @include media(desktop) {
+    font-size: 40px;
+  }
+}
+
+.title {
+  width: 289px;
+  color: $_main_color;
+  margin-bottom: 24px;
+  position: relative;
+
+  @include media(desktop) {
+    width: 1281px;
+    color: $_main_color;
+    margin-bottom: 48px;
+  }
+}
+
+.bg-container {
+  position: relative;
+}
+
+.highlight {
+  background-image: url('../img/about/vector.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 60px;
+  transform: translateY(50%);
+  width: 64px;
+  height: 22px;
+  z-index: -1;
+
+  @include media(desktop) {
+    background-image: url('../img/about/vector-desk.png');
+    right: 487px;
+    width: 117px;
+    height: 36px;
+  }
+}
+
+.game-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+
+  @include media(desktop) {
+    gap: 32px;
+  }
+}
+
+.game-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include media(desktop) {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+.item-map {
+  @include media(desktop) {
+    flex-direction: row-reverse;
+  }
+}
+
+.chicken-photo-container {
+  background-color: $_accent_color;
+  border-radius: 30px;
+  width: 291px;
+  height: 172px;
+  padding: 8px 8px 0 0;
+
+  @include media(desktop) {
+    width: 627px;
+    height: 358px;
+  }
+}
+
+.map-photo-container {
+  width: 291px;
+  height: 168px;
+  padding: 0 0 8px 8px;
+  background-color: $_header_color;
+  border-radius: 30px;
+
+  @include media(desktop) {
+    width: 628px;
+    height: 358px;
+  }
+}
+
+.chicken-photo {
+  border-radius: 30px;
+  height: 166px;
+
+  @include media(desktop) {
+    height: 350px;
+  }
+}
+
+.map-photo {
+  border-radius: 30px;
+  height: 160px;
+
+  @include media(desktop) {
+    height: 350px;
+  }
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include media(desktop) {
+    width: 628px;
+    gap: 16px;
+  }
+}
+
+.description-title {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: $_header_color;
+
+  @include media(desktop) {
+    font-size: 24px;
+  }
+}
+
+.description-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 150%;
+  color: $_main_color;
+
+  @include media(desktop) {
+    font-size: 18px;
+  }
+}
