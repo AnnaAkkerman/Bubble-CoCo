@@ -4,14 +4,16 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/Bubble-CoCo/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bubble Coco</title>
+    <title>Bubble CoCo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Kanit:wght@0,400..500;&family=Montserrat:wght@0,400..500;1,400..500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     
     <script type="module" crossorigin src="/Bubble-CoCo/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/Bubble-CoCo/assets/index-b44460fc.css">
+    <link rel="stylesheet" href="/Bubble-CoCo/assets/index-3ef41e2c.css">
   </head>
   <body>
     <header class="header">
@@ -72,56 +74,95 @@
 </header>
 
 
-    <section>
+    <!-- <section>
       <h1>Bubble Coco</h1>
-      <!-- Path to images as from index.html file -->
-    </section>
+    </section> -->
 
     <!-- Loads the specified .html file -->
-    <section class="vite-promo">
-  <div class="container">
-    <div class="wrapper">
-      <h2 class="title">
-        <span class="gradient">Vite</span>
-      </h2>
-      <p class="text">Next Generation Frontend Tooling</p>
-      <p class="tagline">
-        Get ready for a development environment that can finally catch up with
-        you.
-      </p>
-
-      <ul class="actions">
-        <li class="action">
-          <a
-            class="link"
-            href="https://vitejs.dev/guide/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Get Started</a
-          >
-        </li>
-        <li class="action">
-          <a
-            class="link"
-            href="https://github.com/vitejs/vite"
-            target="_blank"
-            rel="noopener noreferrer"
-            >View on GitHub</a
-          >
-        </li>
-      </ul>
+    <section id="about" class="section section-about">
+  <div class="about-container">
+    <div class="bg-container">
+      <span class="highlight"></span>
     </div>
+    <h2 class="title">
+      About the
+      <span class="text">game</span>
+    </h2>
 
-    <div class="thumb">
-      <!-- Path to images as from index.html file -->
-      <!-- <img
-        class="pic"
-        src="./img/javascript.svg"
-        alt="Vite logo"
-        width="640"
-        height="640"
-      /> -->
-    </div>
+    <ul class="game-list">
+      <li class="game-item">
+        <div class="chicken-photo-container">
+          <picture>
+            <source
+              srcset="/Bubble-CoCo/assets/chicken-desk-b799568f.jpg 1x, /Bubble-CoCo/assets/chicken-desk@2x-6ad2b961.jpg 2x"
+              media="(min-width: 1440px)"
+            />
+            <source
+              srcset="/Bubble-CoCo/assets/chicken-mob-9e189ac4.jpg 1x, /Bubble-CoCo/assets/chicken-mob@2x-cfdc8934.jpg 2x"
+              media="(max-width: 767px)"
+            />
+            <img
+              class="chicken-photo"
+              src="/Bubble-CoCo/assets/chicken-desk-b799568f.jpg"
+              alt="Chicken"
+              width="619"
+              height="350"
+            />
+          </picture>
+        </div>
+        <div class="description-container">
+          <h3 class="description-title">
+            Step into a colorful farm adventure with Bubble CoCo:
+          </h3>
+          <p class="description-text">
+            Bubble Shooter, a delightful bubble-popping game where you help CoCo
+            the chicken rescue her precious chicks. In this fun and engaging
+            game, you’ll shoot bubbles to match three or more of the same color,
+            clearing levels and saving the adorable chicks trapped in the
+            bubbles. Each level brings new challenges, from navigating tricky
+            bubble layouts to overcoming obstacles like rotating platforms and
+            blocked bubbles.
+          </p>
+        </div>
+      </li>
+      <li class="game-item item-map">
+        <div class="map-photo-container">
+          <picture>
+            <source
+              srcset="/Bubble-CoCo/assets/map-desk-38f92eb4.jpg 1x, /Bubble-CoCo/assets/map-desk@2x-4348f1d0.jpg 2x"
+              media="(min-width: 1440px)"
+            />
+            <source
+              srcset="/Bubble-CoCo/assets/map-mob-dcb0dd15.jpg 1x, /Bubble-CoCo/assets/map-mob@2x-53f4e77b.jpg 2x"
+              media="(max-width: 767px)"
+            />
+            <img
+              class="map-photo"
+              src="/Bubble-CoCo/assets/map-desk-38f92eb4.jpg"
+              alt="Chicken"
+              width="622"
+              height="350"
+            />
+          </picture>
+        </div>
+        <div class="description-container">
+          <h3 class="description-title">
+            Unlock powerful boosters and special bubbles!
+          </h3>
+          <p class="description-text">
+            As you progress, you’ll unlock powerful boosters and special bubbles
+            that can help you clear even the most challenging levels. With
+            hundreds of levels to explore, daily rewards, and special events,
+            Bubble CoCo: Bubble Shooter offers endless entertainment for players
+            of all ages. Whether you're a seasoned bubble shooter or a newcomer
+            to the genre, this game is sure to keep you entertained with its
+            charming visuals, cheerful soundtrack, and satisfying gameplay.
+            Start popping bubbles today and see how many chicks you can rescue
+            on your farm adventure!
+          </p>
+        </div>
+      </li>
+    </ul>
   </div>
 </section>
 
