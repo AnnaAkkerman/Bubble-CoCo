@@ -2,6 +2,7 @@
   padding-top: 24px;
   background-color: $_header_color;
   position: sticky;
+  min-width: 320px;
   top: 0;
   z-index: 100;
   @include media(desktop) {

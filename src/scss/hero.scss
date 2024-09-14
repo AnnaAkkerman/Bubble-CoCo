@@ -5,6 +5,7 @@
   background-position: bottom 65px left 0px, top 0px left 0px;
   background-size: 324px 317px, 100vw 520px;
   padding-top: 72px;
+  min-width: 320px;
 
   @include media(desktop) {
     padding-top: 50px;
