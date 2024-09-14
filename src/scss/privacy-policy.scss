@@ -1,0 +1,58 @@
+.privacy-policy {
+  padding-top: 16px;
+  @include media(desktop) {
+    padding-top: 32px;
+  }
+}
+
+.privacy-container {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+  min-width: 320px;
+  @include media(desktop) {
+    max-width: 1280px;
+  }
+}
+
+.privacy-link {
+  display: flex;
+  margin-bottom: 24px;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  text-decoration: underline;
+  color: $_second_text_color;
+  @include media(desktop) {
+    // font-size: 18px;
+    display: none;
+  }
+}
+
+.privacy-item {
+  margin-bottom: 24px;
+  @include media(desktop) {
+    margin-bottom: 48px;
+  }
+}
+
+.privacy-title {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 500;
+  color: $_second_text_color;
+  margin-bottom: 8px;
+  font-size: 16px;
+  @include media(desktop) {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+}
+
+.privacy-policy p {
+  font-size: 13px;
+  margin-bottom: 20px;
+  @include media(desktop) {
+    margin-bottom: 27px;
+    font-size: 18px;
+  }
+}
