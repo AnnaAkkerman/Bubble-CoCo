@@ -1,4 +1,4 @@
-<header class="header">
+<header id="header" class="header">
   <div class="header-container container">
     <div class="logo">
       <a href="../index.html" aria-label="Bubble CoCo">
@@ -28,7 +28,7 @@
     <nav class="header-navigation">
         <ul class="header-navigation-list"></ul>
             <li class="header-navigation-item">
-              <a href="#home" class="header-navigation-link">Home</a>
+              <a href="#hero" class="header-navigation-link">Home</a>
             </li>
             <li class="header-navigation-item">
               <a href="#about" class="header-navigation-link">About the Game</a>
@@ -48,9 +48,43 @@
           </ul>
       </nav>
        <button id="menu-opn-btn" class="menu-btn" type="button">
-            <svg width="18" height="13">
+            <svg width="18" height="13" class="opn-svg">
               <use href="./img/sprite.svg#icon-menu"></use>
             </svg>
           </button>
   </div>
+
+  <div id="mob-menu" class="mob-menu">
+    <div id="menu-navigation" class="mob-container">
+      <div class="top-wrapper">
+        <button id="menu-cls-btn" type="button" class="mob-close-btn">
+          <svg id="menu-opn-btn-svg" width="13" height="12">
+            <use id="menu-opn-btn-use" href="./img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+      <div>
+        <nav class="mob-navigation">
+          <ul class="mob-navigation-list">
+            <li class="header-navigation-item">
+              <a href="#hero" class="header-navigation-link">Home</a>
+            </li>
+            <li class="header-navigation-item">
+              <a href="#about" class="header-navigation-link">About the Game</a>
+            </li>
+            <li class="header-navigation-item">
+              <a href="#reviews" class="header-navigation-link">Reviews</a>
+            </li>
+            <li class="header-navigation-item">
+              <a href="#how_to_play" class="header-navigation-link">How to Play</a>
+            </li>
+             <li class="header-navigation-item">
+              <a href="#gallery" class="header-navigation-link">Gallery</a>
+            </li>
+             <li class="header-navigation-item">
+              <a href="#advantages" class="header-navigation-link">Advantages</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 </header>
