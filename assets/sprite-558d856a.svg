@@ -1,9 +1,0 @@
-<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<defs>
-<symbol id="icon-menu" viewBox="0 0 44 32">
-<path fill="#fff" style="fill: var(--color1, #fff)" d="M0 1.487h44.308v4.923h-44.308v-4.923z"></path>
-<path fill="#fff" style="fill: var(--color1, #fff)" d="M0 13.794h44.308v4.923h-44.308v-4.923z"></path>
-<path fill="#fff" style="fill: var(--color1, #fff)" d="M0 26.102h44.308v4.923h-44.308v-4.923z"></path>
-</symbol>
-</defs>
-</svg>
