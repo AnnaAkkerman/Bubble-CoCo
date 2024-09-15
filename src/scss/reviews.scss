@@ -1,0 +1,142 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.section-reviews {
+  padding-bottom: 57px;
+  padding-top: 14px;
+  background-image: url('../img/reviews/bg-mob.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-size: 333px 448px;
+
+  @include media(desktop) {
+    padding-bottom: 120px;
+  }
+}
+
+.reviews-container {
+  padding: 0 15px 0 16px;
+
+  @include media(desktop) {
+    // padding: 0 80px 0 79px;
+  }
+}
+
+.title-reviews {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  text-align: center;
+  color: $_text_color;
+  margin-bottom: 24px;
+
+  @include media(desktop) {
+    font-size: 40px;
+    margin-bottom: 48px;
+  }
+}
+
+.bg-container-reviews {
+  position: relative;
+}
+
+.reviews-highlight {
+  background-image: url('../img/reviews/vector-mob.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  // right: 60px;
+  // transform: translateX(50%);
+  width: 117px;
+  height: 36px;
+  z-index: -1;
+
+  @include media(desktop) {
+    background-image: url('../img/reviews/vector-desk.png');
+    // right: 487px;
+    width: 173px;
+    height: 51px;
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.carousel .slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.carousel .slick-slide > div {
+  width: 100%;
+  // box-sizing: border-box;
+}
+
+.carousel .slick-slide .reviews-item {
+  margin-right: 0;
+  box-sizing: border-box;
+}
+
+.review-container {
+  border: 1px solid $_header_color;
+  border-radius: 16px;
+  padding: 16px;
+  width: 289px;
+  height: 142px;
+  background-color: $_second_bg_color;
+
+  @include media(desktop) {
+    width: 490px;
+    height: 174px;
+  }
+}
+
+.review-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 150%;
+  line-height: 1.2;
+  color: $_main_color;
+  margin-bottom: 24px;
+
+  @include media(desktop) {
+    font-size: 18px;
+  }
+}
+
+.author-photo {
+  display: flex;
+  gap: 16px;
+}
+
+.review-photo {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+
+.icon-quotes {
+  // fill: red;
+  // stroke: #000;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 5;
+  stroke: currentColor;
+  fill: currentColor;
+  width: 0.97265625em;
+}

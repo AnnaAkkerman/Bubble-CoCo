@@ -5,5 +5,8 @@
 <path fill="#fff" style="fill: var(--color1, #fff)" d="M0 13.794h44.308v4.923h-44.308v-4.923z"></path>
 <path fill="#fff" style="fill: var(--color1, #fff)" d="M0 26.102h44.308v4.923h-44.308v-4.923z"></path>
 </symbol>
+<symbol id="icon-quotes" viewBox="0 0 31 32">
+<path d="M0 0.671h31.135v31.135h-31.135v-31.135z"></path>
+</symbol>
 </defs>
 </svg>
