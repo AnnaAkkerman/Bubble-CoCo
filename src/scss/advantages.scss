@@ -1,0 +1,127 @@
+.advantages {
+  background-image: url('../img/advantages/orange_bckgr_x1_mob.png');
+  background-repeat: no-repeat;
+  background-position: bottom 0px left 0px;
+  background-size: 100vw 520px;
+
+  min-width: 320px;
+
+  @include media(desktop) {
+    padding-top: 50px;
+    background-image: url('../img/hero/bckgr_x1_desk.png'),
+      url('../img/hero/blue_background_desk_x1.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom 175px left -55px, top 0px left 0px;
+    background-size: 1290px 674px, 100vw 755px;
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: url('../img/hero/bckgr_x2_mob.png'),
+      url('../img/advantages/orange_bckgr_x2_mob.png');
+
+    @include media(desktop) {
+      background-image: url('../img/hero/bckgr_x2_desk.png'),
+        url('../img/hero/blue_background_desk_x2.png');
+    }
+  }
+}
+
+.advantage-container {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+  min-width: 264px;
+  @include media(desktop) {
+    max-width: 1127px;
+  }
+}
+
+.advantage-list {
+  display: flex;
+  flex-direction: column;
+  width: 232px;
+  gap: 24px;
+  margin: 0 auto;
+  margin-bottom: 120px;
+
+  @include media(desktop) {
+    flex-direction: row;
+    padding: 16px;
+    width: 1095px;
+    border-radius: 35px;
+    background-color: $_main_bg_color;
+  }
+}
+
+.advantage-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  width: 100%;
+
+  @include media(desktop) {
+    width: calc((100% - 72px) / 4);
+  }
+}
+
+.advantage-item h3 {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: $_second_text_color;
+}
+
+.advantage-item p {
+  font-size: 13px;
+}
+
+.advantage-text {
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.5;
+  color: $_text_color;
+  margin-bottom: 24px;
+}
+
+.advantage-paragraph {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.45;
+  text-align: center;
+  color: $_text_color;
+  margin-bottom: 41px;
+}
+
+.advantage-btn {
+  display: block;
+  background-color: transparent;
+  border: none;
+  width: 134px;
+  height: 38px;
+  margin: 0 auto;
+  padding: 0;
+  padding-bottom: 61px;
+
+  @include media(desktop) {
+    width: 330px;
+    height: 95px;
+    margin-bottom: 116px;
+  }
+}
+
+.advantage-img {
+  border-radius: 15px;
+  @include media(desktop) {
+    border-radius: 0;
+  }
+}

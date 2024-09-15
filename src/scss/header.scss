@@ -1,5 +1,6 @@
 .header {
   padding-top: 24px;
+  padding-bottom: 12px;
   background-color: $_header_color;
   position: sticky;
   min-width: 320px;
@@ -7,6 +8,7 @@
   z-index: 100;
   @include media(desktop) {
     padding-top: 32px;
+    padding-bottom: 16px;
   }
 }
 
