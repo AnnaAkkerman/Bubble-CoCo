@@ -13,7 +13,9 @@
   // background-size: 333px 448px;
 
   @include media(desktop) {
+    background-image: url('../img/reviews/bg-desk.png');
     padding-bottom: 120px;
+    margin-bottom: 26.55px;
   }
 }
 
@@ -63,43 +65,46 @@
 }
 
 .swiper-container {
-  width: 100%;
+  // width: 100%;
   overflow: hidden;
 }
 
 .carousel {
   display: flex;
-  gap: 16px;
+  gap: 24px;
+  // column-gap: 30px;
   flex-wrap: wrap;
 }
 
-.carousel .slick-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 16px;
-}
+// .carousel .slick-slide {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 0 16px;
+//   width: 464px !important;
+// }
 
-.carousel .slick-slide > div {
-  width: 100%;
-  // box-sizing: border-box;
-}
+// .carousel .slick-slide > div {
+//   width: 100%;
+//   // box-sizing: border-box;
+//   // width: 464px !important;
+// }
 
-.carousel .slick-slide .reviews-item {
-  margin-right: 0;
-  box-sizing: border-box;
-}
+// .carousel .slick-slide .reviews-item {
+//   margin-right: 0;
+//   box-sizing: border-box;
+// }
 
 .review-container {
   border: 1px solid $_header_color;
   border-radius: 16px;
   padding: 16px;
-  width: 289px;
+  // width: 288px;
   height: 142px;
   background-color: $_second_bg_color;
 
   @include media(desktop) {
-    width: 490px;
+    max-width: 490px;
     height: 174px;
   }
 }
@@ -132,11 +137,11 @@
 .icon-quotes {
   // fill: red;
   // stroke: #000;
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  stroke-width: 5;
-  stroke: currentColor;
-  fill: currentColor;
-  width: 0.97265625em;
+  // display: inline-block;
+  // width: 1em;
+  // height: 1em;
+  // stroke-width: 5;
+  // stroke: currentColor;
+  // fill: currentColor;
+  // width: 0.97265625em;
 }
