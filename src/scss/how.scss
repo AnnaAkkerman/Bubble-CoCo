@@ -11,7 +11,7 @@
 
   @include media(desktop) {
     padding: 0 63px 0 83px;
-    // width: 1294px;
+    width: 1440px;
   }
 }
 
@@ -60,7 +60,7 @@
 .play-list-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  //   align-items: center;
 }
 
 .play-list {
@@ -228,24 +228,42 @@
 
 .play-item:nth-child(1),
 .play-item:nth-child(3) {
-  width: 611px;
+  @include media(desktop) {
+    width: 611px;
+  }
 }
 
 .play-item:nth-child(2) {
-  width: 673px;
-  margin-left: 621px;
+  @include media(desktop) {
+    width: 673px;
+    margin-left: 621px;
+  }
 }
 
 .play-item:nth-child(4) {
-  width: 737px;
-  margin-left: 557px;
+  @include media(desktop) {
+    width: 737px;
+    margin-left: 557px;
+  }
 }
 
-.play-item:nth-child(5) {
-  width: 659px;
+.play-item:nth-child(5),
+.play-item:nth-child(7) {
+  @include media(desktop) {
+    width: 659px;
+  }
 }
 
 .play-item:nth-child(6) {
-  width: 623px;
-  margin-left: 754px;
+  @include media(desktop) {
+    width: 623px;
+    margin-left: 671px;
+  }
+}
+
+.play-item:nth-child(8) {
+  @include media(desktop) {
+    width: 659px;
+    margin-left: 635px;
+  }
 }

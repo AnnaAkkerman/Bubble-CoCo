@@ -1,9 +1,35 @@
-document.getElementById('readMoreBtn').addEventListener('click', function () {
+document.addEventListener('DOMContentLoaded', function () {
+  const readMoreBtn = document.getElementById('readMoreBtn');
   const hiddenItems = document.querySelectorAll('.play-item.hidden');
 
-  hiddenItems.forEach(function (item) {
-    item.classList.remove('hidden');
-  });
+  function handleButtonVisibility() {
+    const isMobile = window.innerWidth <= 1439;
 
-  this.style.display = 'none';
+    if (isMobile) {
+      if (readMoreBtn) {
+        readMoreBtn.style.display = 'block';
+        readMoreBtn.addEventListener('click', function () {
+          hiddenItems.forEach(function (item) {
+            item.classList.remove('hidden');
+          });
+          this.style.display = 'none';
+        });
+      }
+      hiddenItems.forEach(function (item) {
+        item.classList.add('hidden');
+      });
+    } else {
+      hiddenItems.forEach(function (item) {
+        item.classList.remove('hidden');
+      });
+
+      if (readMoreBtn) {
+        readMoreBtn.style.display = 'none';
+      }
+    }
+  }
+
+  handleButtonVisibility();
+
+  window.addEventListener('resize', handleButtonVisibility);
 });
