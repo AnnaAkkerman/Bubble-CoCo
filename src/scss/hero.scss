@@ -2,17 +2,17 @@
   background-image: url('../img/hero/bckgr_x1_mob.png'),
     url('../img/hero/blue_background_mob_x1.png');
   background-repeat: no-repeat, no-repeat;
-  background-position: bottom 65px left 0px, top 0px left 0px;
-  background-size: 324px 317px, 100vw 520px;
-  padding-top: 72px;
+  background-position: bottom 65px left 0px, top -9px left 0px;
+  background-size: 100vw 317px, 100vw 520px;
+  padding-top: 60px;
   min-width: 320px;
 
   @include media(desktop) {
-    padding-top: 50px;
+    padding-top: 40px;
     background-image: url('../img/hero/bckgr_x1_desk.png'),
       url('../img/hero/blue_background_desk_x1.png');
     background-repeat: no-repeat, no-repeat;
-    background-position: bottom 175px left -55px, top 0px left 0px;
+    background-position: bottom 167px left -55px, top 0px left 0px;
     background-size: 1290px 674px, 100vw 755px;
   }
 }
@@ -64,7 +64,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 32px;
+  margin: 0px 0px 32px 0px;
   color: $_text_color;
   @include media(desktop) {
     font-size: 64px;
@@ -90,7 +90,7 @@
 .hero-img {
   border-radius: 15px;
   @include media(desktop) {
-    border-radius:0;
+    border-radius: 0;
   }
 }
 

@@ -1,18 +1,23 @@
 .advantages {
-  background-image: url('../img/advantages/orange_bckgr_x1_mob.png');
-  background-repeat: no-repeat;
-  background-position: bottom 0px left 0px;
-  background-size: 100vw 520px;
-
+  padding-bottom: 61px;
+  padding-top: 73px;
+  background-image: url('../img/advantages/vector_bgr_x1_mob.png'),
+    url('../img/advantages/orange_bckgr_x1_mob.png');
+  background-repeat: no-repeat no-repeat;
+  background-position: bottom -62px left 0px, bottom 0px left 0px;
+  background-size: 100vw 334px, 100vw 550px;
   min-width: 320px;
 
   @include media(desktop) {
-    padding-top: 50px;
-    background-image: url('../img/hero/bckgr_x1_desk.png'),
-      url('../img/hero/blue_background_desk_x1.png');
-    background-repeat: no-repeat, no-repeat;
-    background-position: bottom 175px left -55px, top 0px left 0px;
-    background-size: 1290px 674px, 100vw 755px;
+    padding-top: 117px;
+    padding-bottom: 124px;
+    background-image: url('../img/advantages/green_bgr_x1_desk.png'),
+      url('../img/advantages/vector_x1_desk.png'),
+      url('../img/advantages/orange_bgr_x1_desk.png');
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: top 0px left 0px, bottom 0px left 0px,
+      bottom 0px left 0px;
+    background-size: 100vw 909px, 100vw 884px, 100vw 1355px;
   }
 }
 
@@ -20,7 +25,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .hero {
-    background-image: url('../img/hero/bckgr_x2_mob.png'),
+    background-image: url('../img/advantages/vector_bgr_x2_mob.png'),
       url('../img/advantages/orange_bckgr_x2_mob.png');
 
     @include media(desktop) {
@@ -40,6 +45,50 @@
   }
 }
 
+.advantage-title {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+  display: block;
+  color: $_text_color;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 0 auto;
+  margin-bottom: 24px;
+  width: 164px;
+  height: 44px;
+  position: relative;
+  z-index: 1;
+  @include media(desktop) {
+    font-size: 40px;
+    width: 240px;
+    height: 64px;
+    margin-bottom: 49px;
+  }
+}
+.advantage-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/advantages/vector_x1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .advantage-title::before {
+    background-image: url('../img/advantages/vector_x2.png');
+  }
+}
+
 .advantage-list {
   display: flex;
   flex-direction: column;
@@ -53,7 +102,10 @@
     padding: 16px;
     width: 1095px;
     border-radius: 35px;
+    row-gap: 32px;
+    column-gap: 45px;
     background-color: $_main_bg_color;
+    flex-wrap: wrap;
   }
 }
 
@@ -67,7 +119,8 @@
   width: 100%;
 
   @include media(desktop) {
-    width: calc((100% - 72px) / 4);
+    width: calc((100% - 135px) / 4);
+    justify-content: flex-start;
   }
 }
 
@@ -76,10 +129,16 @@
   font-weight: 400;
   font-size: 16px;
   color: $_second_text_color;
+  @include media(desktop) {
+    font-size: 24px;
+  }
 }
 
 .advantage-item p {
   font-size: 13px;
+  @include media(desktop) {
+    font-size: 18px;
+  }
 }
 
 .advantage-text {
@@ -90,6 +149,10 @@
   line-height: 1.5;
   color: $_text_color;
   margin-bottom: 24px;
+  @include media(desktop) {
+    font-size: 40px;
+    margin-bottom: 48px;
+  }
 }
 
 .advantage-paragraph {
@@ -100,6 +163,11 @@
   text-align: center;
   color: $_text_color;
   margin-bottom: 41px;
+  @include media(desktop) {
+    margin-bottom: 48px;
+    font-size: 24px;
+    line-height: 1.5;
+  }
 }
 
 .advantage-btn {
@@ -110,12 +178,10 @@
   height: 38px;
   margin: 0 auto;
   padding: 0;
-  padding-bottom: 61px;
 
   @include media(desktop) {
     width: 330px;
     height: 95px;
-    margin-bottom: 116px;
   }
 }
 
