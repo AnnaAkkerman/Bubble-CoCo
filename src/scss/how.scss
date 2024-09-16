@@ -1,3 +1,20 @@
+.section-play {
+  padding-bottom: 72px;
+
+  @include media(desktop) {
+    padding-bottom: 120px;
+  }
+}
+
+.play-container {
+  padding: 0 16px;
+
+  @include media(desktop) {
+    padding: 0 63px 0 83px;
+    // width: 1294px;
+  }
+}
+
 .title-play {
   margin-bottom: 24px;
   font-family: 'Kanit', sans-serif;
@@ -6,6 +23,11 @@
   line-height: 150%;
   text-align: center;
   color: $_main_color;
+
+  @include media(desktop) {
+    font-size: 40px;
+    margin-bottom: 48px;
+  }
 }
 
 .title-span-play {
@@ -20,34 +42,52 @@
   background-image: url('../img/how_to_play/vector.png');
   background-repeat: no-repeat;
   position: absolute;
-  left: 76px;
-  //   transform: translateY(50%);
+  right: 76px;
+  top: 6px;
   width: 56px;
   height: 32px;
   z-index: -1;
 
   @include media(desktop) {
-    // background-image: url('../img/about/vector-desk.png');
-    // right: 487px;
-    // width: 117px;
-    // height: 36px;
+    background-image: url('../img/how_to_play/vector-desk.png');
+    right: 532px;
+    top: 17px;
+    width: 96px;
+    height: 41px;
   }
+}
+
+.play-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .play-list {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  margin-bottom: 16px;
+
+  @include media(desktop) {
+    gap: 40px;
+    margin: 0;
+  }
 }
 
 .play-item {
   display: flex;
   gap: 8px;
   border-radius: 35px;
-  align-items: center; /* Выравнивание по центру по высоте */
-  width: 100%; /* Установи ширину контейнера по необходимости */
+  align-items: center;
+  width: 100%;
   padding: 10px;
   box-sizing: border-box;
+
+  @include media(desktop) {
+    gap: 32px;
+    padding: 0;
+  }
 }
 
 .play-number {
@@ -56,6 +96,12 @@
   background-repeat: no-repeat;
   box-sizing: border-box;
   background-size: 60px 60px;
+
+  @include media(desktop) {
+    width: 120px;
+    height: 120px;
+    background-size: 120px 120px;
+  }
 }
 
 .play-item:nth-child(1),
@@ -66,6 +112,7 @@
     rgba(255, 128, 56, 0.35) 31.4%,
     rgba(201, 25, 147, 0.35) 100%
   );
+  padding-left: 0;
 }
 
 .play-item:nth-child(2),
@@ -77,6 +124,8 @@
     rgba(255, 255, 255, 0.35) 94.704%
   );
   flex-direction: row-reverse;
+  padding-left: 15px;
+  padding-right: 0;
 }
 
 .play-item:nth-child(3),
@@ -87,6 +136,7 @@
     rgba(0, 37, 255, 0.35) 26.147%,
     rgba(0, 37, 255, 0.35) 98.037%
   );
+  padding-left: 0;
 }
 
 .play-item:nth-child(4),
@@ -98,18 +148,24 @@
     rgba(255, 255, 255, 0.35) 92.033%
   );
   flex-direction: row-reverse;
+  padding-left: 15px;
+  padding-right: 0;
 }
 
 .play-text {
-  height: 79px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   margin: 0;
   padding: 0;
-  flex: 1; /* Позволяет p занимать оставшееся пространство */
-  display: flex; /* Включает flexbox для текста внутри p */
-  align-items: center; /* Вертикальное центрирование текста */
+  flex: 1;
+  display: flex;
+  align-items: center;
   word-wrap: break-word;
+
+  @include media(desktop) {
+    font-size: 24px;
+    font-weight: 400;
+  }
 }
 
 .play-item:nth-child(1) .play-number {
@@ -146,4 +202,50 @@
 .play-item:nth-child(8) .play-number {
   background-image: url('../img/how_to_play/eight.png');
   background-position: right;
+}
+
+.play-btn {
+  border: none;
+  text-decoration: underline;
+  background-color: transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  text-decoration-skip-ink: none;
+  text-align: center;
+  color: $_main_color;
+  padding: 0;
+
+  @include media(desktop) {
+    visibility: hidden;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.play-item:nth-child(1),
+.play-item:nth-child(3) {
+  width: 611px;
+}
+
+.play-item:nth-child(2) {
+  width: 673px;
+  margin-left: 621px;
+}
+
+.play-item:nth-child(4) {
+  width: 737px;
+  margin-left: 557px;
+}
+
+.play-item:nth-child(5) {
+  width: 659px;
+}
+
+.play-item:nth-child(6) {
+  width: 623px;
+  margin-left: 754px;
 }
