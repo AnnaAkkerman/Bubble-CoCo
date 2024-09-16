@@ -1,3 +1,6 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 document.addEventListener('DOMContentLoaded', function () {
   const readMoreBtn = document.getElementById('readMoreBtn');
   const hiddenItems = document.querySelectorAll('.play-item.hidden');
