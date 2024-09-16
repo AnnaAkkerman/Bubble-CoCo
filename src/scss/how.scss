@@ -1,0 +1,149 @@
+.title-play {
+  margin-bottom: 24px;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  text-align: center;
+  color: $_main_color;
+}
+
+.title-span-play {
+  color: $_text_color;
+}
+
+.bg-container-play {
+  position: relative;
+}
+
+.reviews-highlight {
+  background-image: url('../img/how_to_play/vector.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 76px;
+  //   transform: translateY(50%);
+  width: 56px;
+  height: 32px;
+  z-index: -1;
+
+  @include media(desktop) {
+    // background-image: url('../img/about/vector-desk.png');
+    // right: 487px;
+    // width: 117px;
+    // height: 36px;
+  }
+}
+
+.play-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.play-item {
+  display: flex;
+  gap: 8px;
+  border-radius: 35px;
+  align-items: center; /* Выравнивание по центру по высоте */
+  width: 100%; /* Установи ширину контейнера по необходимости */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.play-number {
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  background-size: 60px 60px;
+}
+
+.play-item:nth-child(1),
+.play-item:nth-child(5) {
+  background: linear-gradient(
+    63deg,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 128, 56, 0.35) 31.4%,
+    rgba(201, 25, 147, 0.35) 100%
+  );
+}
+
+.play-item:nth-child(2),
+.play-item:nth-child(6) {
+  background: linear-gradient(
+    136.77deg,
+    rgba(89, 184, 23, 0.35),
+    rgba(222, 255, 199, 0.35) 94.695%,
+    rgba(255, 255, 255, 0.35) 94.704%
+  );
+  flex-direction: row-reverse;
+}
+
+.play-item:nth-child(3),
+.play-item:nth-child(7) {
+  background: linear-gradient(
+    69.83deg,
+    rgba(255, 255, 255, 0.35) 8.568%,
+    rgba(0, 37, 255, 0.35) 26.147%,
+    rgba(0, 37, 255, 0.35) 98.037%
+  );
+}
+
+.play-item:nth-child(4),
+.play-item:nth-child(8) {
+  background: linear-gradient(
+    131.05deg,
+    rgba(255, 98, 10, 0.35) 0%,
+    rgba(240, 193, 28, 0.35) 78.164%,
+    rgba(255, 255, 255, 0.35) 92.033%
+  );
+  flex-direction: row-reverse;
+}
+
+.play-text {
+  height: 79px;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  flex: 1; /* Позволяет p занимать оставшееся пространство */
+  display: flex; /* Включает flexbox для текста внутри p */
+  align-items: center; /* Вертикальное центрирование текста */
+  word-wrap: break-word;
+}
+
+.play-item:nth-child(1) .play-number {
+  background-image: url('../img/how_to_play/one.png');
+}
+
+.play-item:nth-child(2) .play-number {
+  background-image: url('../img/how_to_play/two.png');
+  background-position: right;
+}
+
+.play-item:nth-child(3) .play-number {
+  background-image: url('../img/how_to_play/three.png');
+}
+
+.play-item:nth-child(4) .play-number {
+  background-image: url('../img/how_to_play/four.png');
+  background-position: right;
+}
+
+.play-item:nth-child(5) .play-number {
+  background-image: url('../img/how_to_play/five.png');
+}
+
+.play-item:nth-child(6) .play-number {
+  background-image: url('../img/how_to_play/six.png');
+  background-position: right;
+}
+
+.play-item:nth-child(7) .play-number {
+  background-image: url('../img/how_to_play/seven.png');
+}
+
+.play-item:nth-child(8) .play-number {
+  background-image: url('../img/how_to_play/eight.png');
+  background-position: right;
+}
