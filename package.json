@@ -23,6 +23,7 @@
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.7.1",
+    "aos": "^2.3.4",
     "normalize-scss": "^8.0.0",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.1.14",
