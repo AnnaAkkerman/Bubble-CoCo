@@ -21,19 +21,19 @@
   }
 }
 
-@media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .hero {
-    background-image: url('../img/advantages/vector_bgr_x2_mob.png'),
-      url('../img/advantages/orange_bckgr_x2_mob.png');
+// @media (min-device-pixel-ratio: 2),
+//   (min-resolution: 192dpi),
+//   (min-resolution: 2dppx) {
+//   .advantages {
+//     background-image: url('../img/advantages/vector_bgr_x2_mob.png'),
+//       url('../img/advantages/orange_bckgr_x2_mob.png');
 
-    @include media(desktop) {
-      background-image: url('../img/hero/bckgr_x2_desk.png'),
-        url('../img/hero/blue_background_desk_x2.png');
-    }
-  }
-}
+//     @include media(desktop) {
+//       background-image: url('../img/hero/bckgr_x2_desk.png'),
+//         url('../img/hero/blue_background_desk_x2.png');
+//     }
+//   }
+// }
 
 .advantage-container {
   padding-left: 16px;
