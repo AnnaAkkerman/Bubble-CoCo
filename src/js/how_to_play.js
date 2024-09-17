@@ -3,7 +3,7 @@ import 'aos/dist/aos.css';
 
 document.addEventListener('DOMContentLoaded', function () {
   const readMoreBtn = document.getElementById('readMoreBtn');
-  const hiddenItems = document.querySelectorAll('.play-item.hidden');
+  const hiddenItems = document.querySelectorAll('.play-item.invissible');
 
   function handleButtonVisibility() {
     const isMobile = window.innerWidth <= 1439;
@@ -13,17 +13,17 @@ document.addEventListener('DOMContentLoaded', function () {
         readMoreBtn.style.display = 'block';
         readMoreBtn.addEventListener('click', function () {
           hiddenItems.forEach(function (item) {
-            item.classList.remove('hidden');
+            item.classList.remove('invissible');
           });
           this.style.display = 'none';
         });
       }
       hiddenItems.forEach(function (item) {
-        item.classList.add('hidden');
+        item.classList.add('invissible');
       });
     } else {
       hiddenItems.forEach(function (item) {
-        item.classList.remove('hidden');
+        item.classList.remove('invissible');
       });
 
       if (readMoreBtn) {
