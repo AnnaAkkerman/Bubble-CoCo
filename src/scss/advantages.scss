@@ -11,29 +11,32 @@
   @include media(desktop) {
     padding-top: 117px;
     padding-bottom: 124px;
-    background-image: url('../img/advantages/green_bgr_x1_desk.png'),
-      url('../img/advantages/vector_x1_desk.png'),
-      url('../img/advantages/orange_bgr_x1_desk.png');
+    position: relative;
+    background-image: url('../img/advantages/vector_x1_desk.png'),
+      url('../img/advantages/orange_bgr_x1_desk.png'),
+      url('../img/advantages/green_bgr_x1_desk.png');
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: top 0px left 0px, bottom 0px left 0px,
-      bottom 0px left 0px;
-    background-size: 100vw 909px, 100vw 884px, 100vw 1355px;
+    background-position: bottom 0px left 0px, bottom 0px left 0px,
+      top 0px left 0px;
+    background-size: 100vw 884px, 100vw 1355px, 100vw 909px;
+    z-index: 2;
   }
 }
 
-// @media (min-device-pixel-ratio: 2),
-//   (min-resolution: 192dpi),
-//   (min-resolution: 2dppx) {
-//   .advantages {
-//     background-image: url('../img/advantages/vector_bgr_x2_mob.png'),
-//       url('../img/advantages/orange_bckgr_x2_mob.png');
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .advantages {
+    background-image: url('../img/advantages/vector_bgr_x2_mob.png'),
+      url('../img/advantages/orange_bckgr_x2_mob.png');
 
-//     @include media(desktop) {
-//       background-image: url('../img/hero/bckgr_x2_desk.png'),
-//         url('../img/hero/blue_background_desk_x2.png');
-//     }
-//   }
-// }
+    @include media(desktop) {
+      background-image: url('../img/advantages/vector_x2_desk.png'),
+        url('../img/advantages/orange_bgr_x2_desk.png'),
+        url('../img/advantages/green_bgr_x2_desk.png');
+    }
+  }
+}
 
 .advantage-container {
   padding-left: 16px;
@@ -178,6 +181,7 @@
   height: 38px;
   margin: 0 auto;
   padding: 0;
+  transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
 
   @include media(desktop) {
     width: 330px;
@@ -185,9 +189,29 @@
   }
 }
 
+.advantage-btn:hover,
+.advantage-btn:focus {
+  transform: scale(1.07);
+}
+
 .advantage-img {
   border-radius: 15px;
   @include media(desktop) {
     border-radius: 0;
   }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  @include media(desktop) {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
 }

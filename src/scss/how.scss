@@ -1,8 +1,7 @@
 .section-play {
-  padding-bottom: 72px;
-
+  padding-top: 72px;
   @include media(desktop) {
-    padding-bottom: 120px;
+    padding-top: 120px;
   }
 }
 
