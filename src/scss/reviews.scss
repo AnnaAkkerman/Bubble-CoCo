@@ -1,12 +1,15 @@
 .section-reviews {
+  position: relative;
   background-image: url('../img/reviews/bg-mob.png');
   background-repeat: no-repeat;
-  background-size: 100%;
-  padding-top: 14px;
-
+  background-size: 100vw 448px;
+  background-position: bottom 0px left 0px;
+  padding-top: 71px;
+  z-index: -1;
   @include media(desktop) {
     background-image: url('../img/reviews/bg-desk.png');
-    padding-bottom: 26.55px;
+    padding-top: 120px;
+    background-size: 100vw 650px;
   }
 }
 
