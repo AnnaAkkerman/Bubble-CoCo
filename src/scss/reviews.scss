@@ -1,23 +1,37 @@
 .section-reviews {
-  background-image: url('../img/reviews/bg-mob.png');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  padding-top: 14px;
-
+  padding-top: 71px;
   @include media(desktop) {
-    background-image: url('../img/reviews/bg-desk.png');
-    padding-bottom: 26.55px;
+    padding-top: 120px;
   }
 }
 
 .reviews-container {
+  background-image: url('../img/reviews/bg-mob.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
   width: 320px;
   margin: 0 auto;
   padding: 0 16px 0 16px;
 
   @include media(desktop) {
+    background-image: url('../img/reviews/bg-desk.png');
     padding: 0;
     width: 1440px;
+    height: 726.45px;
+    // background-size: 100vw 726.45px;
+    // background-position: top 48px left 0px;
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .reviews-container {
+    background-image: url('../img/reviews/bg-mob@2x.png');
+
+    @include media(desktop) {
+      background-image: url('../img/reviews/bg-desk@2x.png');
+    }
   }
 }
 
@@ -59,6 +73,18 @@
   }
 }
 
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .reviews-highlight {
+    background-image: url('../img/reviews/vector-mob@2x.png');
+
+    @include media(desktop) {
+      background-image: url('../img/reviews/vector-desk@2x.png');
+    }
+  }
+}
+
 .reviews-highlight-second {
   @include media(desktop) {
     background-image: url('../img/reviews/vector-desk-second.png');
@@ -69,6 +95,16 @@
     width: 173px;
     height: 51px;
     z-index: -1;
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .reviews-highlight-second {
+    @include media(desktop) {
+      background-image: url('../img/reviews/vector-desk-second@2x.png');
+    }
   }
 }
 
@@ -225,5 +261,13 @@
   @include media(desktop) {
     height: 48px;
     width: 48px;
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .quotes {
+    background-image: url('../img/reviews/quotes@2x.png');
   }
 }

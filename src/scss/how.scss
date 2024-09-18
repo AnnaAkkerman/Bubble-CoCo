@@ -1,6 +1,8 @@
 .section-play {
+  padding-top: 72px;
+
   @include media(desktop) {
-    padding-top: 26.55px;
+    padding-top: 120px;
   }
 }
 
@@ -52,6 +54,18 @@
     top: 17px;
     width: 96px;
     height: 41px;
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .play-highlight {
+    background-image: url('../img/how_to_play/vector@2x.png');
+
+    @include media(desktop) {
+      background-image: url('../img/how_to_play/vector-desk@2x.png');
+    }
   }
 }
 
