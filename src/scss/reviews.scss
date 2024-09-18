@@ -1,20 +1,24 @@
 .section-reviews {
+  position: relative;
+  background-image: url('../img/reviews/bg-mob.png');
+  background-repeat: no-repeat;
+  background-size: 100vw 448px;
+  background-position: bottom 0px left 0px;
   padding-top: 71px;
+  z-index: -1;
   @include media(desktop) {
+    background-image: url('../img/reviews/bg-desk.png');
     padding-top: 120px;
+    background-size: 100vw 650px;
   }
 }
 
 .reviews-container {
-  background-image: url('../img/reviews/bg-mob.png');
-  background-repeat: no-repeat;
-  background-size: 100%;
   width: 320px;
   margin: 0 auto;
   padding: 0 16px 0 16px;
 
   @include media(desktop) {
-    background-image: url('../img/reviews/bg-desk.png');
     padding: 0;
     width: 1440px;
     height: 726.45px;
@@ -26,7 +30,7 @@
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-  .reviews-container {
+  .section-reviews {
     background-image: url('../img/reviews/bg-mob@2x.png');
 
     @include media(desktop) {
