@@ -55,49 +55,22 @@ $(document).ready(function () {
     const $carousel = $('.carousel');
     const $carouselMob = $('.carousel-mob');
 
-    // Удаляем класс carousel, если ширина экрана меньше 1440px
-    if (!isDesktop) {
-      $('.carousel').removeClass('carousel');
-      $('.carousel-mob').addClass('carousel-mob');
-      console.log('mob');
-    }
-
-    // Удаляем класс carousel-mob, если ширина экрана 1440px или больше
     if (isDesktop) {
       $('.carousel-mob').removeClass('carousel-mob');
       $('.carousel').addClass('carousel');
-      console.log('desk');
+    } else {
+      $('.carousel').removeClass('carousel');
+      $('.carousel-mob').addClass('carousel-mob');
     }
 
-    // Инициализация каруселей в зависимости от размера экрана
     if (isDesktop) {
-      // Инициализация десктопной карусели
       if (!$carousel.hasClass('slick-initialized')) {
         $carousel.slick({
           slidesToShow: 2,
           slidesToScroll: 1,
-          // rows: 3,
-          autoplay: false,
-          autoplaySpeed: 0, // Скорость автоматического прокручивания, чтобы добиться непрерывности
-          speed: 7000, // Скорость прокрутки
-          cssEase: 'linear',
-          infinite: true, // Бесконечный цикл
-          arrows: false, // Если нужно, можете отключить стрелки
-          dots: false, // Если хотите, можете отключить навигационные точки
-          centerMode: false, // Убедитесь, что карточки не центрируются
-        });
-      }
-      // $carousel.show();
-      // $carouselMob.hide();
-    } else {
-      // Инициализация мобильной карусели
-      if (!$carouselMob.hasClass('slick-initialized')) {
-        $carouselMob.slick({
-          slidesToShow: 1,
-          slidesToScroll: 1,
           autoplay: false,
           autoplaySpeed: 0,
-          speed: 1000,
+          speed: 7000,
           cssEase: 'linear',
           infinite: true,
           arrows: false,
@@ -105,26 +78,57 @@ $(document).ready(function () {
           centerMode: false,
         });
       }
-      // $carousel.hide();
-      // $carouselMob.show();
+    } else {
+      if (!$carouselMob.hasClass('slick-initialized')) {
+        $carouselMob.slick({
+          slidesToShow: 1,
+          slidesToScroll: 3,
+          // rows: 2,
+          loop: true,
+          autoplay: false,
+          autoplaySpeed: 0,
+          speed: 7000,
+          cssEase: 'linear',
+          infinite: true,
+          arrows: false,
+          dots: false,
+          centerMode: false,
+        });
+      }
     }
 
-    // Реинициализация AOS после изменения карусели
     AOS.refresh();
   }
 
-  // Инициализация при загрузке страницы
   initializeCarousel();
 
   $(window).on('resize', function () {
     initializeCarousel();
   });
 
-  $('.carousel').on('mouseenter', function () {
-    $(this).slick('slickPlay');
-  });
+  // Обработка для десктопов
+  $('.carousel')
+    .on('mouseenter', function () {
+      $(this).slick('slickPlay');
+    })
+    .on('mouseleave', function () {
+      $(this).slick('slickPause');
+    });
 
-  $('.carousel').on('mouseleave', function () {
-    $(this).slick('slickPause');
-  });
+  // Обработка для мобильных устройств
+  // $('.carousel-mob')
+  //   .on('touchstart', function () {
+  //     $(this).slick('slickPlay');
+  //   })
+  //   .on('touchend', function () {
+  //     $(this).slick('slickPause');
+  //   });
+
+  $('.carousel-mob')
+    .on('mouseenter', function () {
+      $(this).slick('slickPlay');
+    })
+    .on('mouseleave', function () {
+      $(this).slick('slickPause');
+    });
 });
