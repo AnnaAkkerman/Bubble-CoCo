@@ -1,0 +1,168 @@
+.gallery {
+  padding-top: 72px;
+  @include media(desktop) {
+    padding-top: 120px;
+  }
+}
+
+.gallery-container {
+  padding: 0 16px;
+  width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  @include media(desktop) {
+    width: 1266px;
+  }
+}
+.gallery-title {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+  display: block;
+  color: $_text_color;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 0 auto;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+  @include media(desktop) {
+    font-size: 40px;
+    width: 240px;
+    height: 64px;
+    margin-bottom: 48px;
+  }
+}
+.gallery-title::before {
+  content: '';
+  position: absolute;
+  left: -19px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 115px;
+  height: 32px;
+  background-image: url('../img/gallery/vector_x1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  @include media(desktop) {
+    left: 15px;
+    width: 200px;
+    height: 57px;
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .gallery-title::before {
+    background-image: url('../img/gallery/vector_x2.png');
+  }
+}
+
+.gallery-text {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $_main_color;
+  margin-bottom: 24px;
+  @include media(desktop) {
+    display: block;
+    margin: 0 auto;
+    width: 1062px;
+    margin-bottom: 32px;
+    font-size: 24px;
+  }
+}
+
+.swip-container {
+  overflow: hidden;
+  width: 136px;
+  margin: 0 auto;
+  display: flex;
+  height: 320px;
+
+  @include media(desktop) {
+    width: 1062px;
+    height: 712px;
+    margin: 0 auto;
+    background-color: #9ff266;
+    padding: 16px;
+    border-radius: 35px;
+  }
+}
+
+#swiper-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#myPrev {
+  left: 16px;
+  position: absolute;
+  top: 350px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #9ff266;
+  @include media(desktop) {
+    width: 70px;
+    height: 70px;
+    left: 0px;
+    top: 520px;
+  }
+}
+
+#myNext {
+  right: 14px;
+  position: absolute;
+  top: 350px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background-color: #9ff266;
+  padding: 0;
+  @include media(desktop) {
+    width: 70px;
+    height: 70px;
+    right: 0px;
+    top: 520px;
+  }
+}
+#myNext::after {
+  content: url('../img/gallery/rigth.png');
+  font-size: 15px;
+  text-align: center;
+  color: #353535;
+  @include media(desktop) {
+    content: url('../img/gallery/rigth_desk.png');
+  }
+}
+
+#myPrev::after {
+  content: url('../img/gallery/left.png');
+  font-size: 15px;
+  text-align: center;
+  color: #353535;
+  @include media(desktop) {
+    content: url('../img/gallery/left_desk.png');
+  }
+}
+
+#myPagination .swiper-pagination-bullet-active {
+  background-color: green;
+}
+
+#myPagination {
+  @include media(desktop) {
+    display: none;
+  }
+}
