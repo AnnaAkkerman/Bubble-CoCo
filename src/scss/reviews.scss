@@ -152,7 +152,7 @@
 .swiper-container .row-third {
   display: none;
   @include media(desktop) {
-    display: block;
+    display: flex;
     padding: 0;
     overflow: hidden;
     clip-path: inset(0 0 0 140px);

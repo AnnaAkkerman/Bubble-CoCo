@@ -1,8 +1,10 @@
 .section-about {
   padding-top: 72.9px;
+  padding-bottom: 57px;
 
   @include media(desktop) {
     padding-top: 115px;
+    padding-bottom: 120px;
   }
 }
 
