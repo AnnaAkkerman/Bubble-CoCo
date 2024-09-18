@@ -56,6 +56,18 @@
   }
 }
 
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .play-highlight {
+    background-image: url('../img/how_to_play/vector@2x.png');
+
+    @include media(desktop) {
+      background-image: url('../img/how_to_play/vector-desk@2x.png');
+    }
+  }
+}
+
 .play-list-container {
   display: flex;
   flex-direction: column;
