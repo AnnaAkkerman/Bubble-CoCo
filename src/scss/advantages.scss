@@ -1,0 +1,217 @@
+.advantages {
+  padding-bottom: 61px;
+  padding-top: 73px;
+  background-image: url('../img/advantages/vector_bgr_x1_mob.png'),
+    url('../img/advantages/orange_bckgr_x1_mob.png');
+  background-repeat: no-repeat no-repeat;
+  background-position: bottom -62px left 0px, bottom 0px left 0px;
+  background-size: 100vw 334px, 100vw 550px;
+  min-width: 320px;
+
+  @include media(desktop) {
+    padding-top: 117px;
+    padding-bottom: 124px;
+    position: relative;
+    background-image: url('../img/advantages/vector_x1_desk.png'),
+      url('../img/advantages/orange_bgr_x1_desk.png'),
+      url('../img/advantages/green_bgr_x1_desk.png');
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: bottom 0px left 0px, bottom 0px left 0px,
+      top 0px left 0px;
+    background-size: 100vw 884px, 100vw 1355px, 100vw 909px;
+    z-index: 2;
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .advantages {
+    background-image: url('../img/advantages/vector_bgr_x2_mob.png'),
+      url('../img/advantages/orange_bckgr_x2_mob.png');
+
+    @include media(desktop) {
+      background-image: url('../img/advantages/vector_x2_desk.png'),
+        url('../img/advantages/orange_bgr_x2_desk.png'),
+        url('../img/advantages/green_bgr_x2_desk.png');
+    }
+  }
+}
+
+.advantage-container {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+  min-width: 264px;
+  @include media(desktop) {
+    max-width: 1127px;
+  }
+}
+
+.advantage-title {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+  display: block;
+  color: $_text_color;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 0 auto;
+  margin-bottom: 24px;
+  width: 164px;
+  height: 44px;
+  position: relative;
+  z-index: 1;
+  @include media(desktop) {
+    font-size: 40px;
+    width: 240px;
+    height: 64px;
+    margin-bottom: 49px;
+  }
+}
+.advantage-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/advantages/vector_x1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .advantage-title::before {
+    background-image: url('../img/advantages/vector_x2.png');
+  }
+}
+
+.advantage-list {
+  display: flex;
+  flex-direction: column;
+  width: 232px;
+  gap: 24px;
+  margin: 0 auto;
+  margin-bottom: 120px;
+
+  @include media(desktop) {
+    flex-direction: row;
+    padding: 16px;
+    width: 1095px;
+    border-radius: 35px;
+    row-gap: 32px;
+    column-gap: 45px;
+    background-color: $_main_bg_color;
+    flex-wrap: wrap;
+  }
+}
+
+.advantage-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  width: 100%;
+
+  @include media(desktop) {
+    width: calc((100% - 135px) / 4);
+    justify-content: flex-start;
+  }
+}
+
+.advantage-item h3 {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: $_second_text_color;
+  @include media(desktop) {
+    font-size: 24px;
+  }
+}
+
+.advantage-item p {
+  font-size: 13px;
+  @include media(desktop) {
+    font-size: 18px;
+  }
+}
+
+.advantage-text {
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.5;
+  color: $_text_color;
+  margin-bottom: 24px;
+  @include media(desktop) {
+    font-size: 40px;
+    margin-bottom: 48px;
+  }
+}
+
+.advantage-paragraph {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.45;
+  text-align: center;
+  color: $_text_color;
+  margin-bottom: 41px;
+  @include media(desktop) {
+    margin-bottom: 48px;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+}
+
+.advantage-btn {
+  display: block;
+  background-color: transparent;
+  border: none;
+  width: 134px;
+  height: 38px;
+  margin: 0 auto;
+  padding: 0;
+  transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include media(desktop) {
+    width: 330px;
+    height: 95px;
+  }
+}
+
+.advantage-btn:hover,
+.advantage-btn:focus {
+  transform: scale(1.07);
+}
+
+.advantage-img {
+  border-radius: 15px;
+  @include media(desktop) {
+    border-radius: 0;
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  @include media(desktop) {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
