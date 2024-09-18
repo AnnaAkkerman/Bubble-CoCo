@@ -1,10 +1,8 @@
 .section-reviews {
   background-image: url('../img/reviews/bg-mob.png');
   background-repeat: no-repeat;
-  // background-size: 318px 448px;
   background-size: 100%;
   padding-top: 14px;
-  // left: -14.57px;
 
   @include media(desktop) {
     background-image: url('../img/reviews/bg-desk.png');
@@ -16,9 +14,10 @@
   width: 320px;
   margin: 0 auto;
   padding: 0 16px 0 16px;
+
   @include media(desktop) {
+    padding: 0;
     width: 1440px;
-    // padding: 0 80px 0 79px;
   }
 }
 
@@ -53,7 +52,7 @@
 
   @include media(desktop) {
     background-image: url('../img/reviews/vector-desk.png');
-    right: 617px;
+    right: 633px;
     top: 8px;
     width: 173px;
     height: 51px;
@@ -65,7 +64,7 @@
     background-image: url('../img/reviews/vector-desk-second.png');
     background-repeat: no-repeat;
     position: absolute;
-    right: 617px;
+    right: 633px;
     top: 11px;
     width: 173px;
     height: 51px;
@@ -78,6 +77,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  cursor: pointer;
 
   @include media(desktop) {
     width: 1440px;
@@ -96,28 +96,17 @@
 
 .carousel .slick-slide {
   display: flex;
-  // margin-right: 20px;
   width: 288px !important;
 
   @include media(desktop) {
     display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // padding: 0 16px;
-    // flex-wrap: nowrap;
-    // overflow: hidden;
-    // width: 510px !important;
     width: 510px !important;
     margin-right: 24px;
-
-    // flex-shrink: 0; // Предотвращает сжатие элементов
   }
 }
 
 .carousel .slick-slide > div {
   @include media(desktop) {
-    margin-right: 20px;
-
     width: 100%;
   }
 }
@@ -133,7 +122,6 @@
   display: flex;
   flex-wrap: nowrap;
   gap: 16px;
-  // width: 288px;
   overflow: hidden;
 }
 
@@ -141,17 +129,12 @@
   width: 288px !important;
 }
 
-// .slick-initialized .slick-slider {
-//   display: flex;
-// }
-
 .row-first {
   overflow: hidden;
   display: flex;
   gap: 16px;
   @include media(desktop) {
     padding: 0;
-    // padding-left: 123.5px;
     clip-path: inset(0 0 0 140px);
   }
 }
@@ -167,13 +150,8 @@
 }
 
 .swiper-container .row-third {
-  // position: absolute;
-  // visibility: hidden;
   display: none;
-  // top: 0;
-  // left: 0;
   @include media(desktop) {
-    // padding-left: 123.5px;
     display: block;
     padding: 0;
     overflow: hidden;
@@ -181,15 +159,11 @@
   }
 }
 
-// .reviews-item {
-//   width: 510px;
-// }
-
 .review-container {
   border: 1px solid $_header_color;
   border-radius: 16px;
   padding: 16px;
-  width: 288x;
+  width: 288px;
   height: 142px;
   background-color: $_second_bg_color;
   margin: 0 auto;
@@ -245,10 +219,8 @@
   height: 36px;
   background-image: url('../img/reviews/quotes.png');
   background-repeat: no-repeat;
-  background-position: center center;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
+  background-position: center;
+  background-size: cover;
 
   @include media(desktop) {
     height: 48px;
