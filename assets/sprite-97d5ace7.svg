@@ -11,5 +11,8 @@
 <symbol id="icon-line" viewBox="0 0 42 32">
 <path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="3.2" d="M3.2 15.015h38.4M3.2 15.015l18.618-11.815M3.2 15.015l18.618 13.785"></path>
 </symbol>
+<symbol id="icon-quotes" viewBox="0 0 31 32">
+<path d="M0 0.671h31.135v31.135h-31.135v-31.135z"></path>
+</symbol>
 </defs>
 </svg>
