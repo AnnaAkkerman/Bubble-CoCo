@@ -14,7 +14,7 @@
   justify-content: center;
   position: relative;
   @include media(desktop) {
-    width: 1266px;
+    width: 1280px;
   }
 }
 .gallery-title {
@@ -115,13 +115,12 @@
   @include media(desktop) {
     width: 70px;
     height: 70px;
-    left: 0px;
     top: 520px;
   }
 }
 
 #myNext {
-  right: 14px;
+  right: 16px;
   position: absolute;
   top: 350px;
   width: 32px;
@@ -133,7 +132,6 @@
   @include media(desktop) {
     width: 70px;
     height: 70px;
-    right: 0px;
     top: 520px;
   }
 }
