@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const hiddenItems = document.querySelectorAll('.play-item.invissible');
 
   function handleButtonVisibility() {
-    const isMobile = window.innerWidth <= 1439;
+    const isMobile = window.innerWidth <= 1279;
 
     if (isMobile) {
       if (readMoreBtn) {

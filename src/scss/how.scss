@@ -247,14 +247,14 @@
 .play-item:nth-child(2) {
   @include media(desktop) {
     width: 673px;
-    margin-left: 621px;
+    margin-left: auto;
   }
 }
 
 .play-item:nth-child(4) {
   @include media(desktop) {
     width: 737px;
-    margin-left: 557px;
+    margin-left: auto;
   }
 }
 
@@ -268,13 +268,13 @@
 .play-item:nth-child(6) {
   @include media(desktop) {
     width: 623px;
-    margin-left: 671px;
+    margin-left: auto;
   }
 }
 
 .play-item:nth-child(8) {
   @include media(desktop) {
     width: 659px;
-    margin-left: 635px;
+    margin-left: auto;
   }
 }
