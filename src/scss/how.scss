@@ -9,8 +9,7 @@
   padding: 0 16px;
 
   @include media(desktop) {
-    padding: 0 63px 0 83px;
-    width: 1440px;
+    width: 1280px;
   }
 }
 
@@ -49,7 +48,7 @@
 
   @include media(desktop) {
     background-image: url('../img/how_to_play/vector-desk.png');
-    right: 532px;
+    right: 510px;
     top: 17px;
     width: 96px;
     height: 41px;
@@ -61,6 +60,7 @@
   (min-resolution: 2dppx) {
   .play-highlight {
     background-image: url('../img/how_to_play/vector@2x.png');
+    background-size: cover;
 
     @include media(desktop) {
       background-image: url('../img/how_to_play/vector-desk@2x.png');

@@ -10,7 +10,7 @@
   padding: 0 13px 0 16px;
 
   @include media(desktop) {
-    padding: 0 80px 0 79px;
+    padding: 0 16px;
   }
 }
 
@@ -36,7 +36,7 @@
   position: relative;
 
   @include media(desktop) {
-    width: 1281px;
+    width: 1248px;
     color: $_main_color;
     margin-bottom: 48px;
   }
@@ -58,7 +58,7 @@
 
   @include media(desktop) {
     background-image: url('../img/about/vector-desk.png');
-    right: 487px;
+    right: 471px;
     width: 117px;
     height: 36px;
   }
@@ -69,6 +69,7 @@
   (min-resolution: 2dppx) {
   .highlight {
     background-image: url('../img/about/vector@2x.png');
+    background-size: cover;
 
     @include media(desktop) {
       background-image: url('../img/about/vector-desk@2x.png');
@@ -165,7 +166,7 @@
   gap: 8px;
 
   @include media(desktop) {
-    width: 628px;
+    width: 597px;
     gap: 16px;
   }
 }
