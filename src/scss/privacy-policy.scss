@@ -24,7 +24,6 @@
   text-decoration: underline;
   color: $_second_text_color;
   @include media(desktop) {
-    // font-size: 18px;
     display: none;
   }
 }
